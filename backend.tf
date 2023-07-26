@@ -2,7 +2,7 @@ terraform {
   backend "azurerm" {
     resource_group_name  = "DefaultResourceGroup-EUS"
     storage_account_name = "tstateterraform01"
-    container_name       = "tfstate"
+    container_name       = "tfstate-dev"
     key                  = "terraform.tfstate"
   }
 }
