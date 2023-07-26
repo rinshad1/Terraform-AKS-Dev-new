@@ -1,9 +1,9 @@
 resource "azurerm_network_security_group" "example" {
-  name                = "example-nsg"
+  name                = "example-nsg-dev"
   location            = azurerm_resource_group.k8s.location
   resource_group_name = azurerm_resource_group.k8s.name
   security_rule {
-    name                       = "Allow-RDP"
+    name                       = "Allow-RDP-dev"
     priority                   = 100
     direction                  = "Inbound"
     access                     = "Allow"
