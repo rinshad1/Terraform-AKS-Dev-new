@@ -1,17 +1,17 @@
 variable "resourcename" {
-  default = "k8s-resources-dev"
+  default = "k8s-resources-prod"
 }
 variable "clustername" {
-  default = "kubernetes-aks1-dev"
+  default = "kubernetes-aks1-prod"
 }
 variable "vnetname" {
-  default = "vnet-aks1-dev"
+  default = "vnet-aks1-prod"
 }
 variable "location" {
   default = "East US"
 }
 variable "dnspreffix" {
-  default = "kubecluster-dev"
+  default = "kubecluster-prod"
 }
 variable "size" {
   default = "Standard_D2_v2"
