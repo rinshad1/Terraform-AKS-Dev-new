@@ -21,5 +21,7 @@ steps:
   inputs:
     azureSubscription: 'Free Trial (06a981a6-ce1c-421e-a6e8-431e5dcd12af)'
     ScriptType: 'InlineScript'
-    Inline: 'pwd'
+    Inline: |
+      cd ../../r1/a
+      pwd
     azurePowerShellVersion: 'LatestVersion'
