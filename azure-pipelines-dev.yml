@@ -17,3 +17,9 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: AzurePowerShell@5
+  inputs:
+    azureSubscription: 'Free Trial (06a981a6-ce1c-421e-a6e8-431e5dcd12af)'
+    ScriptType: 'InlineScript'
+    Inline: 'pwd'
+    azurePowerShellVersion: 'LatestVersion'
