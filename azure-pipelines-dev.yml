@@ -10,18 +10,21 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-- task: AzurePowerShell@5
+- task: TerraformCLI@0
   inputs:
-    azureSubscription: 'Free Trial (06a981a6-ce1c-421e-a6e8-431e5dcd12af)'
-    ScriptType: 'InlineScript'
-    Inline: |
-      cd ../../r1/a
-      pwd
-    azurePowerShellVersion: 'LatestVersion'
+    command: 'init'
+    backendType: 'azurerm'
+    backendServiceArm: 'Free Trial (06a981a6-ce1c-421e-a6e8-431e5dcd12af)'
+    allowTelemetryCollection: true
+
+- task: TerraformCLI@0
+  inputs:
+    command: 'plan'
+    environmentServiceName: 'Free Trial (06a981a6-ce1c-421e-a6e8-431e5dcd12af)'
+    allowTelemetryCollection: true
+
+- task: TerraformCLI@0
+  inputs:
+    command: 'apply'
+    environmentServiceName: 'Free Trial (06a981a6-ce1c-421e-a6e8-431e5dcd12af)'
+    allowTelemetryCollection: true
