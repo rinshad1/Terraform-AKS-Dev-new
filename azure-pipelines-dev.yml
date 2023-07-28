@@ -19,7 +19,7 @@ steps:
 
 - task: TerraformCLI@0
   inputs:
-    command: 'plan'
+    command: 'plan -lock=false'
     environmentServiceName: 'Free Trial (06a981a6-ce1c-421e-a6e8-431e5dcd12af)'
     allowTelemetryCollection: true
 
