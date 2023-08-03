@@ -27,10 +27,10 @@ variable "client_secret" {
   default     = "$(client_secret)"
   description = "Azure Client Secret"
 }
-#variable "subscription_id" {
-#  type = string
-#}
+variable "subscription_id" {
+  type = string
+}
 
-#variable "tenant_id" {
-#  type = string
-#}
+variable "tenant_id" {
+  type = string
+}
