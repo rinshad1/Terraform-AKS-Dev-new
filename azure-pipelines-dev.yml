@@ -21,12 +21,12 @@ steps:
   inputs:
     command: 'plan'
     environmentServiceName: 'Free Trial (06a981a6-ce1c-421e-a6e8-431e5dcd12af)'
-    commandOptions: '-lock=false -var="subscription_id=$(subscription_id)" -var="tenant_id=$(tenant_id)" '
+    commandOptions: '-var="subscription_id=$(subscription_id)" -var="tenant_id=$(tenant_id)" '
     allowTelemetryCollection: true
 
 - task: TerraformCLI@0
   inputs:
     command: 'apply'
     environmentServiceName: 'Free Trial (06a981a6-ce1c-421e-a6e8-431e5dcd12af)'
-    commandOptions: '-lock=false  -var="client_id=$(client_id)" -var="client_secret=$(client_secret)" -var="subscription_id=$(subscription_id)" -var="tenant_id=$(tenant_id)"'
+    commandOptions: '-var="client_id=$(client_id)" -var="client_secret=$(client_secret)" -var="subscription_id=$(subscription_id)" -var="tenant_id=$(tenant_id)"'
     allowTelemetryCollection: true
