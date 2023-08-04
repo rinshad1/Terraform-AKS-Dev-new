@@ -10,13 +10,6 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: ManualValidation@0
-  timeoutInMinutes: 1440 # task times out in 1 day
-  inputs:
-         notifyUsers: |
-            vprinshad234@gmail.com
-         instructions: 'Please validate the build configuration and resume'
-         onTimeout: 'resume'
 - task: TerraformCLI@0
   inputs:
     command: 'init'
