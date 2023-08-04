@@ -8,7 +8,9 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-
+- task: ManualValidation@0
+  inputs:
+    notifyUsers: 'vprinshad234@gmail.com'
 steps:
 - task: TerraformCLI@0
   inputs:
