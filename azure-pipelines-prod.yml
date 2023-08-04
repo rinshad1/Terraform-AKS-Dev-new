@@ -12,7 +12,6 @@ pool:
 steps:
 - task: TerraformCLI@0
   inputs:
-    environment: environment1
     command: 'init'
     backendType: 'azurerm'
     backendServiceArm: 'Free Trial (06a981a6-ce1c-421e-a6e8-431e5dcd12af)'
