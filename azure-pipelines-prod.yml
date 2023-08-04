@@ -10,6 +10,9 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: ManualValidation@0
+  inputs:
+    notifyUsers: 'vprinshad234@gmail.com'
 - task: TerraformCLI@0
   inputs:
     command: 'init'
