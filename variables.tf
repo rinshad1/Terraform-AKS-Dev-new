@@ -8,7 +8,7 @@ variable "vnetname" {
   default = "vnet-aks1-test"
 }
 variable "location" {
-  default = "East US"
+  default = "West US 2"
 }
 variable "dnspreffix" {
   default = "kubecluster-test"
