@@ -7,6 +7,7 @@ trigger:
 - prod
 
 pool:
+  vmImage: ubuntu-latest
 
 steps:
 - task: TerraformCLI@0
