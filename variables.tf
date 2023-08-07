@@ -14,7 +14,7 @@ variable "dnspreffix" {
   default = "kubecluster-test"
 }
 variable "size" {
-  default = "Standard_F2s_v2"
+  default = "standard_b16als_v2"
 }
 variable "agentnode" {
   default = "1"
