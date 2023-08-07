@@ -14,7 +14,7 @@ variable "dnspreffix" {
   default = "kubecluster-prod"
 }
 variable "size" {
-  default = "Standard_F2s_v2"
+  default = "Standard_D2_v2"
 }
 variable "agentnode" {
   default = "1"
