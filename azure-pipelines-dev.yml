@@ -14,19 +14,19 @@ steps:
   inputs:
     command: 'init'
     backendType: 'azurerm'
-    backendServiceArm: 'Free Trial (06a981a6-ce1c-421e-a6e8-431e5dcd12af)'
+    backendServiceArm: 'Free Trial (efbb986d-4024-4385-9acc-15be2ce6c469)'
     allowTelemetryCollection: true
 
 - task: TerraformCLI@0
   inputs:
     command: 'plan'
-    environmentServiceName: 'Free Trial (06a981a6-ce1c-421e-a6e8-431e5dcd12af)'
+    environmentServiceName: 'Free Trial (efbb986d-4024-4385-9acc-15be2ce6c469)'
     commandOptions: '-var="subscription_id=$(subscription_id)" -var="tenant_id=$(tenant_id)" '
     allowTelemetryCollection: true
 
 - task: TerraformCLI@0
   inputs:
     command: 'apply'
-    environmentServiceName: 'Free Trial (06a981a6-ce1c-421e-a6e8-431e5dcd12af)'
+    environmentServiceName: 'Free Trial (efbb986d-4024-4385-9acc-15be2ce6c469)'
     commandOptions: '-var="client_id=$(client_id)" -var="client_secret=$(client_secret)" -var="subscription_id=$(subscription_id)" -var="tenant_id=$(tenant_id)"'
     allowTelemetryCollection: true
